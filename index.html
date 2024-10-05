@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>Pokedex</title>
+
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./index.page.css" />
     <link rel="stylesheet" href="./components/card/card.component.css" />
+
+    <script type="text/javascript" src="./components/card/card.component.js" async></script>
   </head>
 
   <body>
@@ -21,25 +24,15 @@
           </div>
 
           <div class="cards-collection__body">
-            <a href="./details.html">
-              <div class="card">
-                <div class="card__header">
-                  <h1 class="card__header__title">Charizard</h1>
-                  <p class="card__header__subtitle">120 HP</p>
-                </div>
-                <div class="card__body">
-                  <div class="card__body__illustration">
-                    <img src="./assets/images/charizard.png" />
-                  </div>
-                </div>
-                <div class="card__footer">
-                  <div class="card__footer__prices-information">
-                    <p class="card__footer__prices-information__average-price">2078 $</p>
-                    <p class="card__footer__prices-information__updated-date">05/10/2024</p>
-                  </div>
-                </div>
-              </div>
-            </a>
+            <pokemon-card
+              name="Charizard"
+              to="./details.html"
+              is-link="true"
+              hp="120"
+              image="./assets/images/charizard.png"
+              price="2078 $"
+              updated-date="05/10/2024"
+            ></pokemon-card>
           </div>
         </div>
 
