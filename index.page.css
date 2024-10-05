@@ -1,0 +1,33 @@
+.cards-collection {
+  margin-bottom: 4rem;
+}
+
+.cards-collection__header {
+  padding: 2rem;
+}
+
+.cards-collection__header__title {
+  font-size: 1.25rem;
+}
+
+.cards-collection__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.wishlist__header {
+  padding: 2rem;
+}
+
+.wishlist__header__title {
+  font-size: 1.25rem;
+}
+
+.wishlist__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 2rem;
+}
