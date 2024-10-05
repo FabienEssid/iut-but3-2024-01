@@ -1,0 +1,47 @@
+.details {
+  display: flex;
+  gap: 1rem;
+}
+
+.details__information {
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.details__information__header {
+  padding: 2rem;
+}
+
+.details__information__header__title {
+  font-size: 1.25rem;
+}
+
+.details__information__body {
+  padding: 0 2rem;
+}
+
+.details__information__information-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 24rem;
+}
+
+.details__information__information-list__item--name {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+.details__information__information-list__item--value {
+  padding: 0.5rem 1rem;
+
+}
+
+.details__illustration {
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-sizing: border-box;
+  padding: 2rem;
+}
