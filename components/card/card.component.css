@@ -33,7 +33,26 @@
 }
 
 .card__footer__prices-information {
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
+}
+
+.card__footer__cta {
+  background-color: black;
+  border-color: black;
+  border-radius: 0.375rem;
+  border-style: solid;
+  border-width: 1px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.card__footer__cta:hover {
+  background-color: white;
+  color: black;
 }

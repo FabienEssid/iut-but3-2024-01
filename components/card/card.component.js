@@ -10,27 +10,39 @@ class PokemonCard extends HTMLElement {
     this.to = this.getAttribute("to");
     this.updatedDate = this.getAttribute("updated-date");
 
+    this.cardId = `card-${this.name.toLowerCase().replaceAll(" ", "-")}`;
+    this.buttonId = `cta-${this.name.toLowerCase().replaceAll(" ", "-")}`;
+
     this.innerHTML = `
-      <a href="${this.isLink && !!this.to ? this.to : "#"}">
-        <div class="card">
-          <div class="card__header">
-            <h1 class="card__header__title">${this.name}</h1>
-            <p class="card__header__subtitle">${this.hp} HP</p>
-          </div>
-          <div class="card__body">
-            <div class="card__body__illustration">
+      <div id="${this.cardId}" class="card">
+        <div class="card__header">
+          <h1 class="card__header__title">${this.name}</h1>
+          <p class="card__header__subtitle">${this.hp} HP</p>
+        </div>
+        <div class="card__body">
+          <div class="card__body__illustration">
+            <a href="${this.isLink && !!this.to ? this.to : "#"}">
               <img src="${this.image}" />
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer__prices-information">
-              <p class="card__footer__prices-information__average-price">${this.price}</p>
-              <p class="card__footer__prices-information__updated-date">${this.updatedDate}</p>
-            </div>
+            </a>
           </div>
         </div>
-      </a>
+        <div class="card__footer">
+          <div class="card__footer__prices-information">
+            <p class="card__footer__prices-information__average-price">${this.price}</p>
+            <p class="card__footer__prices-information__updated-date">${this.updatedDate}</p>
+          </div>
+
+          <button id="${this.buttonId}" role="button" type="button" class="card__footer__cta">Add to wishlist</button>
+        </div>
+      </div>
     `;
+
+    document.querySelector(`#${this.buttonId}`).addEventListener("click",() =>  {
+      const cardElement = document.querySelector(`#${this.cardId}`);
+      const wishlistElement = document.querySelector(".wishlist__body");
+
+      wishlistElement.appendChild(cardElement);
+    });
   }
 }
 
